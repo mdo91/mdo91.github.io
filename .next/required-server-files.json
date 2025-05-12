@@ -12,7 +12,7 @@
     },
     "distDir": ".next",
     "cleanDistDir": true,
-    "assetPrefix": "/",
+    "assetPrefix": "https://buildsyr.com",
     "cacheMaxMemorySize": 52428800,
     "configOrigin": "next.config.mjs",
     "useFileSystemPublicRoutes": true,
@@ -46,7 +46,7 @@
         256,
         384
       ],
-      "path": "/_next/image",
+      "path": "/_next/image/",
       "loader": "default",
       "loaderFile": "",
       "domains": [],
@@ -58,7 +58,13 @@
       "dangerouslyAllowSVG": false,
       "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;",
       "contentDispositionType": "attachment",
-      "remotePatterns": [],
+      "remotePatterns": [
+        {
+          "hostname": "buildsyr.com",
+          "protocol": "https",
+          "port": ""
+        }
+      ],
       "unoptimized": true
     },
     "devIndicators": {
@@ -73,7 +79,7 @@
     },
     "basePath": "",
     "sassOptions": {},
-    "trailingSlash": false,
+    "trailingSlash": true,
     "i18n": null,
     "productionBrowserSourceMaps": false,
     "excludeDefaultMomentLocales": true,
