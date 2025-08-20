@@ -40,6 +40,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ar" dir="rtl">
+      <head>
+        <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+      </head>
       <body className={`${inter.variable} ${tahoma.variable}`}>
         <LanguageProvider>
           <LanguageSwitcher />
