@@ -13,6 +13,7 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/80 px-3 py-1 text-xs font-medium shadow-sm backdrop-blur">
               <span className="inline-block size-2 rounded-full bg-purple-500" />
               Introducing our mobile app
+              <span className="ml-2 rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-700">v1.1.0</span>
             </div>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
               Your day, simplified

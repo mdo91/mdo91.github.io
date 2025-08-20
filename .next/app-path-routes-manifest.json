@@ -1,0 +1,5 @@
+{
+  "/api/submit-form/route": "/api/submit-form",
+  "/_not-found/page": "/_not-found",
+  "/page": "/"
+}
