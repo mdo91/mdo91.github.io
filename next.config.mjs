@@ -12,7 +12,6 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: '',
-  assetPrefix: 'https://buildsyr.com',
   distDir: 'out',
 }
 
