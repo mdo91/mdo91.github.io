@@ -12,13 +12,13 @@ export default function Home() {
           <div className="flex flex-col items-center text-center gap-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/80 px-3 py-1 text-xs font-medium shadow-sm backdrop-blur">
               <span className="inline-block size-2 rounded-full bg-purple-500" />
-              Introducing our mobile app
+              DailyTaskr for iOS
             </div>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Your day, simplified
+              Plan with intention. Finish with confidence.
             </h1>
             <p className="max-w-2xl text-base text-gray-600 sm:text-lg">
-              Stay organized, track habits, and manage tasks — all in one beautifully simple app. Dummy copy for preview.
+              DailyTaskr is a calm, focused daily planner. Add tasks in seconds, set a time and priority, and get gentle reminders right when you need them. Clean design and subtle haptics keep you motivated without distractions.
             </p>
 
             <div className="mt-2 flex w-full max-w-md items-center justify-center gap-3">
@@ -43,7 +43,7 @@ export default function Home() {
             <div className="mt-8 w-full max-w-md">
               <div className="rounded-[2rem] border border-gray-200 bg-white p-2 shadow-md">
                 <div className="relative mx-auto aspect-[9/19] w-full max-w-[320px] overflow-hidden rounded-[2rem] border border-gray-200 bg-gray-50">
-                  <Image src="/placeholder.jpg" alt="App preview" fill className="object-cover" priority />
+                  <Image src="/hero-screenshot.png" alt="DailyTaskr app preview" fill className="object-cover" priority />
                 </div>
               </div>
             </div>
@@ -54,30 +54,55 @@ export default function Home() {
       {/* Features */}
       <section className="mx-auto max-w-6xl px-4 py-14 sm:py-20">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold sm:text-3xl">Everything you need to stay on track</h2>
-          <p className="mt-2 text-gray-600">Beautifully simple features that just work. All copy is placeholder.</p>
+          <h2 className="text-2xl font-semibold sm:text-3xl">What you can do</h2>
+          <p className="mt-2 text-gray-600">Plan fast, stay on schedule, and finish more — every day.</p>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3">
           <div className="rounded-2xl border border-gray-200 p-5 shadow-sm">
-            <div className="mb-3 inline-flex size-10 items-center justify-center rounded-xl bg-purple-100 text-purple-600">📌</div>
-            <h3 className="font-semibold">Smart Tasks</h3>
-            <p className="mt-1 text-sm text-gray-600">Plan your day with intelligent suggestions and quick add.</p>
+            <div className="mb-3 inline-flex size-10 items-center justify-center rounded-xl bg-purple-100 text-purple-600">⚡</div>
+            <h3 className="font-semibold">Plan fast</h3>
+            <p className="mt-1 text-sm text-gray-600">Create tasks quickly with title, time, category, and priority.</p>
           </div>
           <div className="rounded-2xl border border-gray-200 p-5 shadow-sm">
             <div className="mb-3 inline-flex size-10 items-center justify-center rounded-xl bg-indigo-100 text-indigo-600">⏰</div>
-            <h3 className="font-semibold">Gentle Reminders</h3>
-            <p className="mt-1 text-sm text-gray-600">Never miss what matters with time‑aware nudges.</p>
+            <h3 className="font-semibold">Stay on schedule</h3>
+            <p className="mt-1 text-sm text-gray-600">Flexible reminders from 0 minutes to 1 day before, plus a custom time picker.</p>
           </div>
           <div className="rounded-2xl border border-gray-200 p-5 shadow-sm">
-            <div className="mb-3 inline-flex size-10 items-center justify-center rounded-xl bg-emerald-100 text-emerald-600">📈</div>
-            <h3 className="font-semibold">Habit Tracking</h3>
-            <p className="mt-1 text-sm text-gray-600">Build streaks and celebrate progress with simple goals.</p>
+            <div className="mb-3 inline-flex size-10 items-center justify-center rounded-xl bg-emerald-100 text-emerald-600">⭕</div>
+            <h3 className="font-semibold">See progress</h3>
+            <p className="mt-1 text-sm text-gray-600">A simple progress ring shows how much you’ve completed today.</p>
           </div>
           <div className="rounded-2xl border border-gray-200 p-5 shadow-sm">
-            <div className="mb-3 inline-flex size-10 items-center justify-center rounded-xl bg-rose-100 text-rose-600">🤝</div>
-            <h3 className="font-semibold">Share & Collaborate</h3>
-            <p className="mt-1 text-sm text-gray-600">Loop in friends or family for shared lists and plans.</p>
+            <div className="mb-3 inline-flex size-10 items-center justify-center rounded-xl bg-amber-100 text-amber-600">📅</div>
+            <h3 className="font-semibold">Organize by date</h3>
+            <p className="mt-1 text-sm text-gray-600">Browse and select days in the built‑in calendar to plan ahead.</p>
+          </div>
+          <div className="rounded-2xl border border-gray-200 p-5 shadow-sm">
+            <div className="mb-3 inline-flex size-10 items-center justify-center rounded-xl bg-pink-100 text-pink-600">🎯</div>
+            <h3 className="font-semibold">Focus your list</h3>
+            <p className="mt-1 text-sm text-gray-600">Filter by all or completed, and sort by time or recency.</p>
+          </div>
+          <div className="rounded-2xl border border-gray-200 p-5 shadow-sm">
+            <div className="mb-3 inline-flex size-10 items-center justify-center rounded-xl bg-sky-100 text-sky-600">🔔</div>
+            <h3 className="font-semibold">Control notifications</h3>
+            <p className="mt-1 text-sm text-gray-600">Toggle reminders per task — mute or unmute anytime.</p>
+          </div>
+          <div className="rounded-2xl border border-gray-200 p-5 shadow-sm">
+            <div className="mb-3 inline-flex size-10 items-center justify-center rounded-xl bg-rose-100 text-rose-600">🏷️</div>
+            <h3 className="font-semibold">Prioritize clearly</h3>
+            <p className="mt-1 text-sm text-gray-600">Low / Medium / High tags make urgency obvious at a glance.</p>
+          </div>
+          <div className="rounded-2xl border border-gray-200 p-5 shadow-sm">
+            <div className="mb-3 inline-flex size-10 items-center justify-center rounded-xl bg-lime-100 text-lime-600">🧩</div>
+            <h3 className="font-semibold">Home Screen widgets</h3>
+            <p className="mt-1 text-sm text-gray-600">View today’s tasks right on your Home Screen (small and medium).</p>
+          </div>
+          <div className="rounded-2xl border border-gray-200 p-5 shadow-sm">
+            <div className="mb-3 inline-flex size-10 items-center justify-center rounded-xl bg-slate-100 text-slate-700">🌿</div>
+            <h3 className="font-semibold">Beautiful and readable</h3>
+            <p className="mt-1 text-sm text-gray-600">Thoughtful typography, smooth animations, and a soothing interface.</p>
           </div>
         </div>
       </section>
@@ -92,7 +117,7 @@ export default function Home() {
           {[1,2,3,4].map((i) => (
             <div key={i} className="snap-start shrink-0">
               <div className="relative aspect-[9/19] w-[220px] overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 shadow-sm">
-                <Image src="/placeholder.jpg" alt={`Screen ${i}`} fill className="object-cover" />
+                <Image src={`/screenshot-${i}.png`} alt={`DailyTaskr screenshot ${i}`} fill className="object-cover" />
               </div>
             </div>
           ))}
@@ -121,11 +146,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Privacy */}
+      <section className="mx-auto max-w-6xl px-4 pb-10 sm:pb-16">
+        <div className="rounded-3xl border border-gray-200 bg-white p-6 text-center shadow-sm sm:p-10">
+          <h3 className="text-2xl font-semibold">Privacy‑first</h3>
+          <p className="mt-2 text-gray-600">Your data stays on your device. No account, no tracking — just effortless planning that respects your privacy.</p>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-4 pb-20">
         <div className="rounded-3xl border border-gray-200 bg-gradient-to-br from-purple-50 to-indigo-50 p-6 text-center shadow-sm sm:p-10">
-          <h3 className="text-2xl font-semibold">Get early access</h3>
-          <p className="mt-2 text-gray-600">Join the waitlist. We’ll send a link when it’s ready. Dummy form only.</p>
+          <h3 className="text-2xl font-semibold">Get early access to DailyTaskr</h3>
+          <p className="mt-2 text-gray-600">Join the waitlist. We’ll send a link when it’s ready.</p>
           <form className="mx-auto mt-5 flex max-w-md gap-2">
             <input type="email" placeholder="you@example.com" className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none ring-purple-500 focus:ring-2" />
             <button type="button" className="rounded-xl bg-purple-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-purple-700">Notify me</button>
@@ -136,8 +169,8 @@ export default function Home() {
 
       <footer className="mx-auto max-w-6xl px-4 pb-10 text-center text-sm text-gray-500">
         <div className="mx-auto flex items-center justify-center gap-2">
-          <Image src="/placeholder-logo.svg" alt="Logo" width={18} height={18} />
-          <span>Mobile App — All content is placeholder</span>
+          <Image src="/app-icon.png" alt="DailyTaskr logo" width={18} height={18} />
+          <span>DailyTaskr — a calm, focused daily planner</span>
         </div>
       </footer>
     </main>

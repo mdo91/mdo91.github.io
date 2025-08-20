@@ -12,7 +12,7 @@
     },
     "distDir": ".next",
     "cleanDistDir": true,
-    "assetPrefix": "https://buildsyr.com",
+    "assetPrefix": "",
     "cacheMaxMemorySize": 52428800,
     "configOrigin": "next.config.mjs",
     "useFileSystemPublicRoutes": true,
@@ -58,13 +58,7 @@
       "dangerouslyAllowSVG": false,
       "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;",
       "contentDispositionType": "attachment",
-      "remotePatterns": [
-        {
-          "hostname": "buildsyr.com",
-          "protocol": "https",
-          "port": ""
-        }
-      ],
+      "remotePatterns": [],
       "unoptimized": true
     },
     "devIndicators": {

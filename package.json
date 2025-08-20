@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "export": "echo 'next export removed; using output: export'",
-    "predeploy": "pnpm build",
-    "deploy": "gh-pages -d out"
+    "predeploy": "pnpm build && mkdir -p out && touch out/.nojekyll",
+    "deploy": "gh-pages -d out -b main"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
