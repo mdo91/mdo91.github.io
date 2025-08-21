@@ -599,6 +599,9 @@ export default function Home() {
             <div className="footer-content">
               <div className="logo">D</div>
               <span>DailyTaskr — Privacy-first daily planning</span>
+              <a href="/privacy" className="text-white hover:text-gray-300 transition-colors ml-4">
+                Privacy Policy
+              </a>
             </div>
           </div>
         </footer>
