@@ -27,8 +27,59 @@
             padding: 0 20px;
         }
         
+        .navbar {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .navbar-nav {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .navbar-nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .navbar-nav a:hover {
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-nav {
+                gap: 1rem;
+            }
+        }
+        
         .hero {
-            padding: 80px 0;
+            padding: 120px 0 80px 0;
             text-align: center;
             color: white;
         }
@@ -389,6 +440,19 @@
     </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <span style="width: 24px; height: 24px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; font-size: 0.9rem;">D</span>
+                DailyTaskr
+            </a>
+            <ul class="navbar-nav">
+                <li><a href="/support">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+    
     <main>
         <!-- Hero Section -->
         <section class="hero">
@@ -619,6 +683,7 @@
                     <div style="display: flex; gap: 15px; margin-left: 15px;">
                         <a href="/privacy" style="color: white; text-decoration: none; transition: color 0.3s ease;">Privacy Policy</a>
                         <a href="/terms" style="color: white; text-decoration: none; transition: color 0.3s ease;">Terms of Use</a>
+                        <a href="/support" style="color: white; text-decoration: none; transition: color 0.3s ease;">Support</a>
                     </div>
                 </div>
             </div>
