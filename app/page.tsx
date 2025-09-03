@@ -18,71 +18,73 @@ import {
 export default function Home() {
   return (
     <>
-      <style jsx global>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-        }
-        .animate-float { animation: float 6s ease-in-out infinite; }
-      `}</style>
+
       
       <main className="min-h-screen bg-gradient-to-br from-indigo-600 via-purple-600 to-fuchsia-600">
         {/* Hero Section */}
         <section className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="text-center">
-              {/* Version Badge */}
-              <div className="inline-flex items-center rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm border border-white/20 ring-1 ring-white/20 shadow-lg mb-8">
-                ✨ Introducing DailyTaskr v1.1.0
-              </div>
-              
-              {/* Main Headline */}
-              <h1 className="text-6xl sm:text-7xl font-extrabold text-white mb-6 tracking-tight">
-                DailyTaskr
-              </h1>
-              
-              {/* Subtitle */}
-              <p className="mx-auto max-w-3xl text-xl sm:text-2xl text-white/90 mb-12 leading-relaxed">
-                A calm, focused daily planner that helps you plan with intention and finish with confidence. 
-                Add tasks in seconds, set a time and priority, and get gentle reminders right when you need them.
-              </p>
-              
-              {/* App Store Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-                <a 
-                  href="https://apps.apple.com/de/app/dailytaskr/id6751054391?l=en-GB" 
-                  className="group flex items-center gap-3 bg-black hover:bg-gray-900 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/25 border border-white/20"
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <img 
-                    src="/apple-store-icon.png" 
-                    alt="Download on App Store" 
-                    className="w-6 h-6"
-                  />
-                  Download on App Store
-                </a>
+          {/* Background Pattern Overlay */}
+          <div className="absolute inset-0 bg-gradient-radial from-white/5 via-transparent to-transparent"></div>
+          
+          <div className="mx-auto max-w-7xl relative z-10">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Left Column - Content */}
+              <div className="text-left">
+                {/* Version Badge */}
+                <div className="inline-flex items-center rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm border border-white/20 ring-1 ring-white/20 shadow-lg mb-8">
+                  ✨ Introducing DailyTaskr v1.1.0
+                </div>
                 
-                <a 
-                  href="#" 
-                  className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm border border-white/20"
-                >
-                  <Play className="w-6 h-6" />
-                  Get it on Google Play
-                </a>
+                {/* Main Headline */}
+                <h1 className="text-6xl sm:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+                  DailyTaskr
+                </h1>
+                
+                {/* Subtitle */}
+                <p className="text-xl sm:text-2xl text-white/90 mb-12 leading-relaxed max-w-2xl">
+                  A calm, focused daily planner that helps you plan with intention and finish with confidence. 
+                  Add tasks in seconds, set a time and priority, and get gentle reminders right when you need them.
+                </p>
+                
+                {/* App Store Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 items-start">
+                  <a 
+                    href="https://apps.apple.com/de/app/dailytaskr/id6751054391?l=en-GB" 
+                    className="group flex items-center gap-3 bg-black hover:bg-gray-900 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/25 border border-white/20"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <img 
+                      src="/apple-store-icon.png" 
+                      alt="Download on App Store" 
+                      className="w-6 h-6"
+                    />
+                    Download on App Store
+                  </a>
+                  
+                  <a 
+                    href="#" 
+                    className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm border border-white/20"
+                  >
+                    <Play className="w-6 h-6" />
+                    Get it on Google Play
+                  </a>
+                </div>
               </div>
               
-              {/* Hero Phone Mockup */}
-              <div className="relative mx-auto max-w-sm animate-float">
-                <div className="relative bg-gradient-to-br from-gray-100 via-white to-gray-200 p-4 rounded-[3rem] shadow-2xl border border-gray-300/50">
-                  <div className="relative aspect-[9/19] rounded-[2rem] overflow-hidden shadow-inner">
-                    <Image 
-                      src="/hero-screenshot.png" 
-                      alt="DailyTaskr app preview" 
-                      fill 
-                      className="object-cover"
-                      priority
-                    />
+              {/* Right Column - Hero Phone Mockup */}
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative max-w-sm animate-bounce">
+                  <div className="relative bg-gradient-to-br from-gray-100 via-white to-gray-200 p-4 rounded-[3rem] shadow-2xl border border-gray-300/50 ring-2 ring-indigo-500/20">
+                    <div className="relative aspect-[9/19] rounded-[2rem] overflow-hidden shadow-inner">
+                      <Image 
+                        src="/hero-screenshot.png" 
+                        alt="DailyTaskr app preview" 
+                        fill 
+                        className="object-cover"
+                        priority
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
