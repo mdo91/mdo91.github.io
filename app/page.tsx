@@ -6,364 +6,6 @@ export default function Home() {
   return (
     <>
       <style jsx global>{`
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-        
-        body {
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-          line-height: 1.6;
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          min-height: 100vh;
-        }
-        
-        .container {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-        }
-        
-        .hero {
-          padding: 80px 0;
-          text-align: center;
-          color: white;
-        }
-        
-        .hero h1 {
-          font-size: 3.5rem;
-          font-weight: 700;
-          margin-bottom: 20px;
-          text-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        }
-        
-        .version-tag {
-          display: inline-block;
-          background: rgba(255,255,255,0.2);
-          padding: 8px 16px;
-          border-radius: 25px;
-          font-size: 0.9rem;
-          margin-bottom: 30px;
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(255,255,255,0.3);
-        }
-        
-        .hero p {
-          font-size: 1.3rem;
-          max-width: 600px;
-          margin: 0 auto 40px;
-          opacity: 0.9;
-        }
-        
-        .app-buttons {
-          display: flex;
-          gap: 20px;
-          justify-content: center;
-          margin-bottom: 60px;
-          flex-wrap: wrap;
-        }
-        
-        .app-button {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          background: rgba(0,0,0,0.8);
-          color: white;
-          padding: 15px 25px;
-          border-radius: 12px;
-          text-decoration: none;
-          font-weight: 600;
-          transition: all 0.3s ease;
-          border: 1px solid rgba(255,255,255,0.2);
-        }
-        
-        .app-button:hover {
-          background: rgba(0,0,0,0.9);
-          transform: translateY(-2px);
-          box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-        }
-        
-        .phone-mockup {
-          max-width: 300px;
-          margin: 0 auto;
-          position: relative;
-        }
-        
-        .phone-frame {
-          background: linear-gradient(145deg, #f0f0f0, #cacaca);
-          border-radius: 35px;
-          padding: 15px;
-          box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        
-        .phone-screen {
-          border-radius: 25px;
-          overflow: hidden;
-          aspect-ratio: 9/19;
-          position: relative;
-        }
-        
-        .section {
-          background: white;
-          padding: 80px 0;
-        }
-        
-        .section h2 {
-          font-size: 2.8rem;
-          text-align: center;
-          margin-bottom: 20px;
-          color: #2d3748;
-          font-weight: 700;
-        }
-        
-        .section-subtitle {
-          text-align: center;
-          font-size: 1.2rem;
-          color: #666;
-          margin-bottom: 60px;
-          max-width: 600px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        
-        .features-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 40px;
-          margin-top: 40px;
-        }
-        
-        .feature-card {
-          background: white;
-          padding: 40px 30px;
-          border-radius: 20px;
-          text-align: center;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-          transition: all 0.3s ease;
-          border: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        .feature-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-        }
-        
-        .feature-icon {
-          font-size: 3rem;
-          margin-bottom: 20px;
-          display: block;
-        }
-        
-        .feature-card h3 {
-          font-size: 1.5rem;
-          margin-bottom: 15px;
-          color: #2d3748;
-          font-weight: 600;
-        }
-        
-        .feature-card p {
-          color: #666;
-          line-height: 1.6;
-        }
-        
-        .screenshots-section {
-          background: #f8fafc;
-          padding: 80px 0;
-        }
-        
-        .screenshots-container {
-          display: flex;
-          gap: 30px;
-          overflow-x: auto;
-          padding: 20px 0;
-          scroll-snap-type: x mandatory;
-        }
-        
-        .screenshot {
-          flex: 0 0 220px;
-          scroll-snap-align: start;
-        }
-        
-        .screenshot-frame {
-          border-radius: 20px;
-          overflow: hidden;
-          aspect-ratio: 9/19;
-          position: relative;
-          box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-        }
-        
-        .testimonials {
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          color: white;
-          padding: 80px 0;
-        }
-        
-        .testimonials-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 40px;
-          margin-top: 40px;
-        }
-        
-        .testimonial {
-          background: rgba(255,255,255,0.1);
-          padding: 30px;
-          border-radius: 20px;
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(255,255,255,0.2);
-        }
-        
-        .testimonial-quote {
-          font-size: 1.1rem;
-          margin-bottom: 20px;
-          font-style: italic;
-        }
-        
-        .testimonial-author {
-          display: flex;
-          align-items: center;
-          gap: 15px;
-        }
-        
-        .author-avatar {
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          background: rgba(255,255,255,0.2);
-        }
-        
-        .cta-section {
-          background: white;
-          padding: 80px 0;
-          text-align: center;
-        }
-        
-        .cta-box {
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          padding: 60px 40px;
-          border-radius: 25px;
-          color: white;
-          max-width: 600px;
-          margin: 0 auto;
-        }
-        
-        .cta-box h3 {
-          font-size: 2.2rem;
-          margin-bottom: 15px;
-          font-weight: 700;
-        }
-        
-        .cta-box p {
-          font-size: 1.1rem;
-          margin-bottom: 30px;
-          opacity: 0.9;
-        }
-        
-        .email-form {
-          display: flex;
-          gap: 15px;
-          max-width: 400px;
-          margin: 0 auto;
-          flex-wrap: wrap;
-        }
-        
-        .email-input {
-          flex: 1;
-          padding: 15px 20px;
-          border: none;
-          border-radius: 12px;
-          font-size: 1rem;
-          min-width: 250px;
-        }
-        
-        .notify-button {
-          background: rgba(0,0,0,0.8);
-          color: white;
-          border: none;
-          padding: 15px 25px;
-          border-radius: 12px;
-          font-weight: 600;
-          cursor: pointer;
-          transition: all 0.3s ease;
-        }
-        
-        .notify-button:hover {
-          background: rgba(0,0,0,1);
-        }
-        
-        .footer {
-          background: #2d3748;
-          color: white;
-          padding: 40px 0;
-          text-align: center;
-        }
-        
-        .footer-content {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 15px;
-        }
-        
-        .logo {
-          width: 30px;
-          height: 30px;
-          background: #667eea;
-          border-radius: 8px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-weight: bold;
-          color: white;
-        }
-        
-        @media (max-width: 768px) {
-          .hero h1 {
-            font-size: 2.5rem;
-          }
-          
-          .hero p {
-            font-size: 1.1rem;
-          }
-          
-          .app-buttons {
-            flex-direction: column;
-            align-items: center;
-          }
-          
-          .features-grid {
-            grid-template-columns: 1fr;
-          }
-          
-          .email-form {
-            flex-direction: column;
-          }
-          
-          .email-input {
-            min-width: auto;
-          }
-        }
-        
-        .fade-in {
-          animation: fadeIn 0.8s ease-in-out;
-        }
-        
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        .float {
-          animation: float 6s ease-in-out infinite;
-        }
-        
         @keyframes float {
           0%, 100% {
             transform: translateY(0px);
@@ -372,47 +14,67 @@ export default function Home() {
             transform: translateY(-20px);
           }
         }
+        
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
       `}</style>
-
-      <main>
+      
+      <main className="min-h-screen bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-800">
         {/* Hero Section */}
-        <section className="hero">
-          <div className="container">
-            <div className="fade-in">
-              <div className="version-tag">
+        <section className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="text-center">
+              {/* Version Badge */}
+              <div className="inline-flex items-center rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm border border-white/20 mb-8">
                 ✨ Introducing DailyTaskr v1.1.0
               </div>
-              <h1>DailyTaskr</h1>
-              <p>
+              
+              {/* Main Headline */}
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
+                DailyTaskr
+              </h1>
+              
+              {/* Subtitle */}
+              <p className="mx-auto max-w-3xl text-xl sm:text-2xl text-white/90 mb-12 leading-relaxed">
                 A calm, focused daily planner that helps you plan with intention and finish with confidence. 
                 Add tasks in seconds, set a time and priority, and get gentle reminders right when you need them.
               </p>
               
-              <div className="app-buttons">
-                <a href="https://apps.apple.com/de/app/dailytaskr/id6751054391?l=en-GB" className="app-button" target="_blank" rel="noopener noreferrer">
+              {/* App Store Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+                <a 
+                  href="https://apps.apple.com/de/app/dailytaskr/id6751054391?l=en-GB" 
+                  className="group flex items-center gap-3 bg-black/80 hover:bg-black text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-white/20"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
                   <img 
                     src="/apple-store-icon.png" 
                     alt="Download on App Store" 
-                    width={24} 
-                    height={24}
-                    style={{ objectFit: 'contain' }}
+                    className="w-6 h-6"
                   />
                   Download on App Store
                 </a>
-                <a href="#" className="app-button">
-                  <span>🤖</span>
+                
+                <a 
+                  href="#" 
+                  className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm border border-white/20"
+                >
+                  <span className="text-2xl">🤖</span>
                   Get it on Google Play
                 </a>
               </div>
-
-              <div className="phone-mockup float">
-                <div className="phone-frame">
-                  <div className="phone-screen">
+              
+              {/* Hero Phone Mockup */}
+              <div className="relative mx-auto max-w-sm animate-float">
+                <div className="relative bg-gradient-to-br from-gray-100 to-gray-300 p-4 rounded-[3rem] shadow-2xl">
+                  <div className="relative aspect-[9/19] rounded-[2rem] overflow-hidden">
                     <Image 
                       src="/hero-screenshot.png" 
                       alt="DailyTaskr app preview" 
                       fill 
-                      style={{ objectFit: 'cover' }}
+                      className="object-cover"
                       priority
                     />
                   </div>
@@ -423,68 +85,58 @@ export default function Home() {
         </section>
 
         {/* Features Section */}
-        <section className="section">
-          <div className="container">
-            <h2>What you can do</h2>
-            <p className="section-subtitle">
-              Plan fast, stay on schedule, and focus your list with DailyTaskr's powerful features.
-            </p>
+        <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                What you can do
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Plan fast, stay on schedule, and focus your list with DailyTaskr's powerful features.
+              </p>
+            </div>
             
-            <div className="features-grid">
-              <div className="feature-card fade-in">
-                <span className="feature-icon">⚡</span>
-                <h3>Plan fast</h3>
-                <p>Create tasks quickly with title, time, category, and priority.</p>
-              </div>
-              
-              <div className="feature-card fade-in">
-                <span className="feature-icon">⏰</span>
-                <h3>Stay on schedule</h3>
-                <p>Flexible reminders from 0 minutes to 1 day before, plus custom time picker.</p>
-              </div>
-              
-              <div className="feature-card fade-in">
-                <span className="feature-icon">📊</span>
-                <h3>See progress</h3>
-                <p>A simple progress ring shows how much you've completed today.</p>
-              </div>
-              
-              <div className="feature-card fade-in">
-                <span className="feature-icon">📅</span>
-                <h3>Organize by date</h3>
-                <p>Browse and select days in the built-in calendar to plan ahead.</p>
-              </div>
-              
-              <div className="feature-card fade-in">
-                <span className="feature-icon">🔔</span>
-                <h3>Control notifications</h3>
-                <p>Toggle reminders per task—mute or unmute anytime.</p>
-              </div>
-              
-              <div className="feature-card fade-in">
-                <span className="feature-icon">🎯</span>
-                <h3>Prioritize clearly</h3>
-                <p>Low/Medium/High tags make urgency obvious at a glance.</p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                { icon: "⚡", title: "Plan fast", description: "Create tasks quickly with title, time, category, and priority." },
+                { icon: "⏰", title: "Stay on schedule", description: "Flexible reminders from 0 minutes to 1 day before, plus custom time picker." },
+                { icon: "📊", title: "See progress", description: "A simple progress ring shows how much you've completed today." },
+                { icon: "📅", title: "Organize by date", description: "Browse and select days in the built-in calendar to plan ahead." },
+                { icon: "🔔", title: "Control notifications", description: "Toggle reminders per task—mute or unmute anytime." },
+                { icon: "🎯", title: "Prioritize clearly", description: "Low/Medium/High tags make urgency obvious at a glance." }
+              ].map((feature, index) => (
+                <div 
+                  key={index}
+                  className="group bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
+                >
+                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* Screenshots Section */}
-        <section className="screenshots-section">
-          <div className="container">
-            <h2>Peek inside</h2>
-            <p className="section-subtitle">DailyTaskr screenshots</p>
+        <section className="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                Peek inside
+              </h2>
+              <p className="text-xl text-gray-600">DailyTaskr screenshots</p>
+            </div>
             
-            <div className="screenshots-container">
+            <div className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide">
               {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="screenshot">
-                  <div className="screenshot-frame">
+                <div key={i} className="flex-shrink-0">
+                  <div className="relative w-64 aspect-[9/19] rounded-3xl overflow-hidden shadow-2xl">
                     <Image 
                       src={`/screenshot-${i}.png`} 
                       alt={`DailyTaskr screenshot ${i}`} 
                       fill 
-                      style={{ objectFit: 'cover' }}
+                      className="object-cover"
                     />
                   </div>
                 </div>
@@ -494,105 +146,100 @@ export default function Home() {
         </section>
 
         {/* Privacy Section */}
-        <section className="section">
-          <div className="container">
-            <h2>Privacy-first</h2>
-            <p className="section-subtitle">
-              Your data stays on your device. No account, no tracking—just effortless planning that respects your privacy.
-            </p>
+        <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                Privacy-first
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Your data stays on your device. No account, no tracking—just effortless planning that respects your privacy.
+              </p>
+            </div>
             
-            <div className="features-grid">
-              <div className="feature-card fade-in">
-                <span className="feature-icon">🔒</span>
-                <h3>Local storage</h3>
-                <p>All your tasks and data stay on your device.</p>
-              </div>
-              
-              <div className="feature-card fade-in">
-                <span className="feature-icon">🚫</span>
-                <h3>No tracking</h3>
-                <p>We don't collect, store, or share your personal information.</p>
-              </div>
-              
-              <div className="feature-card fade-in">
-                <span className="feature-icon">📱</span>
-                <h3>Home Screen widgets</h3>
-                <p>View today's tasks right on your Home Screen in small and medium sizes.</p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                { icon: "🔒", title: "Local storage", description: "All your tasks and data stay on your device." },
+                { icon: "🚫", title: "No tracking", description: "We don't collect, store, or share your personal information." },
+                { icon: "📱", title: "Home Screen widgets", description: "View today's tasks right on your Home Screen in small and medium sizes." }
+              ].map((feature, index) => (
+                <div 
+                  key={index}
+                  className="text-center group"
+                >
+                  <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* Testimonials Section */}
-        <section className="testimonials">
-          <div className="container">
-            <h2>Loved by early testers</h2>
-            <p className="section-subtitle">
-              What people say about the experience.
-            </p>
+        <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-800 py-20 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+                Loved by early testers
+              </h2>
+              <p className="text-xl text-white/90">What people say about the experience.</p>
+            </div>
             
-            <div className="testimonials-grid">
-              <div className="testimonial">
-                <p className="testimonial-quote">
-                  "I finish tasks faster and feel calmer."
-                </p>
-                <div className="testimonial-author">
-                  <div className="author-avatar"></div>
-                  <div>
-                    <div style={{fontWeight: 600}}>Alex Doe</div>
-                    <div style={{opacity: 0.8, fontSize: '0.9rem'}}>Beta tester</div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                { quote: "I finish tasks faster and feel calmer.", author: "Alex Doe", role: "Beta tester" },
+                { quote: "It's the only app I actually open daily.", author: "Sarah Chen", role: "Beta tester" },
+                { quote: "Beautiful, simple, and surprisingly powerful.", author: "Mike Johnson", role: "Beta tester" }
+              ].map((testimonial, index) => (
+                <div 
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-all duration-300"
+                >
+                  <p className="text-lg text-white/90 italic mb-6 leading-relaxed">
+                    "{testimonial.quote}"
+                  </p>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white font-bold">
+                      {testimonial.author.charAt(0)}
+                    </div>
+                    <div>
+                      <div className="font-semibold text-white">{testimonial.author}</div>
+                      <div className="text-white/70 text-sm">{testimonial.role}</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="testimonial">
-                <p className="testimonial-quote">
-                  "It's the only app I actually open daily."
-                </p>
-                <div className="testimonial-author">
-                  <div className="author-avatar"></div>
-                  <div>
-                    <div style={{fontWeight: 600}}>Sarah Chen</div>
-                    <div style={{opacity: 0.8, fontSize: '0.9rem'}}>Beta tester</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="testimonial">
-                <p className="testimonial-quote">
-                  "Beautiful, simple, and surprisingly powerful."
-                </p>
-                <div className="testimonial-author">
-                  <div className="author-avatar"></div>
-                  <div>
-                    <div style={{fontWeight: 600}}>Mike Johnson</div>
-                    <div style={{opacity: 0.8, fontSize: '0.9rem'}}>Beta tester</div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="cta-section">
-          <div className="container">
-            <div className="cta-box">
-              <h3>Get early access</h3>
-              <p>Join the waitlist. We'll send a link when it's ready.</p>
+        <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-800 p-12 rounded-3xl text-center text-white">
+              <h3 className="text-3xl sm:text-4xl font-bold mb-4">
+                Get early access
+              </h3>
+              <p className="text-xl text-white/90 mb-8">
+                Join the waitlist. We'll send a link when it's ready.
+              </p>
               
-              <form className="email-form">
+              <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-6">
                 <input 
                   type="email" 
                   placeholder="you@example.com" 
-                  className="email-input"
+                  className="flex-1 px-6 py-4 rounded-2xl border-0 text-gray-900 font-medium focus:ring-4 focus:ring-white/20 focus:outline-none"
                 />
-                <button type="submit" className="notify-button">
+                <button 
+                  type="submit" 
+                  className="px-8 py-4 bg-black hover:bg-gray-900 text-white font-semibold rounded-2xl transition-colors duration-300"
+                >
                   Notify me
                 </button>
               </form>
               
-              <p style={{fontSize: '0.9rem', marginTop: '15px', opacity: 0.8}}>
+              <p className="text-sm text-white/70">
                 No spam. Unsubscribe anytime.
               </p>
             </div>
@@ -600,12 +247,17 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="footer">
-          <div className="container">
-            <div className="footer-content">
-              <div className="logo">D</div>
-              <span>DailyTaskr — Privacy-first daily planning</span>
-              <a href="/privacy" className="text-white hover:text-gray-300 transition-colors ml-4">
+        <footer className="bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+              <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white">
+                D
+              </div>
+              <span className="text-white text-lg">DailyTaskr — Privacy-first daily planning</span>
+              <a 
+                href="/privacy" 
+                className="text-white/80 hover:text-white transition-colors duration-300 underline"
+              >
                 Privacy Policy
               </a>
             </div>
