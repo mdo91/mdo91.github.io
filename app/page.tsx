@@ -390,8 +390,8 @@ export default function Home() {
               
               <div className="app-buttons">
                 <a href="https://apps.apple.com/de/app/dailytaskr/id6751054391?l=en-GB" className="app-button" target="_blank" rel="noopener noreferrer">
-                  <Image 
-                    src="/apple-store.png" 
+                  <img 
+                    src="/apple-store-icon.png" 
                     alt="Download on App Store" 
                     width={24} 
                     height={24}
