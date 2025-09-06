@@ -61,14 +61,6 @@ export default function Home() {
                     />
                     Download on App Store
                   </a>
-                  
-                  <a 
-                    href="#" 
-                    className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm border border-white/20"
-                  >
-                    <Play className="w-6 h-6" />
-                    Get it on Google Play
-                  </a>
                 </div>
               </div>
               
