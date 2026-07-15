@@ -7,51 +7,311 @@
     <link rel="stylesheet" href="/src/styles/cartoon.css" />
   </head>
   <body>
-    <main class="page">
+    <main class="page long-form">
       <header class="cartoon-header">
         <div class="mascot" aria-hidden="true">🔒</div>
         <h1>Privacy Policy</h1>
-        <p>Your privacy matters to us. Here’s how we handle your information.</p>
+        <p>How Damas Technologies LLC collects, uses, and protects your information.</p>
       </header>
 
-      <section class="cartoon-card">
-        <h2>1. Information We Collect</h2>
-        <p>We may collect information you provide directly, such as:</p>
+      <div class="policy-meta">
+        <p><strong>Last updated:</strong> July 15, 2026</p>
+        <p><strong>Effective date:</strong> July 15, 2026</p>
+      </div>
+
+      <section class="cartoon-card policy-section">
+        <h2>1. INTRODUCTION</h2>
+        <p>This Privacy Policy explains how Damas Technologies LLC ("Damas," "we," "us," or "our") collects, uses, stores, and shares information when you use the Damas mobile application for iPhone (the "App") and related services available at <a href="https://www.damascenerose.com">damascenerose.com</a>.</p>
+        <p>Damas helps you turn public social video links and, where available, audio you provide into transcripts, translations, and AI-generated notes and summaries.</p>
+        <p>By using the App, you agree to this Privacy Policy. If you do not agree, please do not use the App.</p>
+        <p><strong>Data controller:</strong><br>Damas Technologies LLC<br>Contact: <a href="mailto:hi@damastechnologies.com">hi@damastechnologies.com</a></p>
+      </section>
+
+      <section class="cartoon-card policy-section">
+        <h2>2. SCOPE</h2>
+        <p>This policy applies to:</p>
         <ul>
-          <li>Responses submitted through surveys or forms</li>
-          <li>Contact details you choose to share with us</li>
-          <li>Basic technical data like browser type and device information</li>
+          <li>The Damas iOS App (bundle ID: com.damas.ai.recording.technologies)</li>
+          <li>Our API and processing services that power transcription, translation, and summarization</li>
+          <li>Our website at damascenerose.com (including this policy)</li>
+        </ul>        <h3>This policy does not apply to:</h3>
+        <ul>
+          <li>Third-party platforms whose links you paste (for example, social video hosts)</li>
+          <li>Apple (App Store, payments, push delivery infrastructure)</li>
+          <li>OpenAI (when we use their API as a subprocessor — see Section 8)</li>
+          <li>Third-party websites linked from the App</li>
         </ul>
       </section>
 
-      <section class="cartoon-card">
-        <h2>2. How We Use Information</h2>
-        <p>We use collected information to:</p>
+      <section class="cartoon-card policy-section">
+        <h2>3. SUMMARY</h2>
         <ul>
-          <li>Operate and improve our website and services</li>
-          <li>Understand user feedback and product interest</li>
-          <li>Respond to support requests and inquiries</li>
+          <li><strong>Accounts:</strong> We do not offer user accounts. We use a device identifier to operate the service.</li>
+          <li><strong>What you provide:</strong> Public video post links, language choices, transcript text (for summaries), and optionally audio for transcription.</li>
+          <li><strong>AI processing:</strong> Content is processed on our servers and may be processed by OpenAI after you give explicit in-app consent.</li>
+          <li><strong>Local storage:</strong> Notes, transcripts, and recordings are stored on your device unless you delete them.</li>
+          <li><strong>Payments:</strong> Subscriptions are handled by Apple; we do not receive your payment card details.</li>
+          <li><strong>Advertising / tracking:</strong> We do not use third-party advertising or cross-app tracking SDKs in the current App.</li>
+          <li><strong>Children:</strong> The App is not directed to children under 13.</li>
         </ul>
       </section>
 
-      <section class="cartoon-card">
-        <h2>3. Third-Party Services</h2>
-        <p>Our site may use third-party tools (such as embedded forms) that collect information according to their own privacy policies. We encourage you to review those policies when using external services.</p>
+      <section class="cartoon-card policy-section">
+        <h2>4. INFORMATION WE COLLECT</h2>        <h3>4.1 Information you provide</h3>
+        <ul>
+          <li><strong>Video post links:</strong> Public HTTPS links you paste (validated for supported social video hosts).</li>
+          <li><strong>Language preferences:</strong> Target language for translation jobs.</li>
+          <li><strong>Transcript and note content:</strong> Text generated or edited in the App, including content you submit for AI summarization.</li>
+          <li><strong>Audio recordings:</strong> If you use voice recording features, audio captured via the microphone and saved on your device; audio may be uploaded for server-side transcription when that feature is enabled.</li>
+          <li><strong>Onboarding choices (optional):</strong> Occupation and interest tags you select during onboarding. These are stored on your device only and are not sent to our servers in the current App version.</li>
+          <li><strong>Clipboard:</strong> If you use "Paste," the App reads a URL from your clipboard only when you initiate that action. You may copy note text to the clipboard from the editor.</li>
+        </ul>
+        <h3>4.2 Information collected automatically</h3>
+        <ul>
+          <li><strong>Device identifier (device_id):</strong> A random UUID generated on first launch, stored in the iOS Keychain, and sent with job requests so we can process jobs, enforce fair-use limits, and correlate notifications. It is not your Apple ID.</li>
+          <li><strong>Push notification token:</strong> If you allow notifications, we may send your device's APNs token (as a hexadecimal string) when starting a job so we can notify you when processing completes.</li>
+          <li><strong>Request metadata:</strong> Such as request timestamps, job IDs, job status, error codes, and a per-request X-Request-ID for troubleshooting.</li>
+          <li><strong>Subscription status:</strong> Whether you have an active in-app subscription, determined via Apple StoreKit on your device.</li>
+          <li><strong>App version and device type:</strong> May be included in server logs for support and security.</li>
+        </ul>
+        <h3>4.3 Information we do not collect</h3>
+        <p>Based on the current App, we do not intentionally collect:</p>
+        <ul>
+          <li>Your name, email, or phone number (unless you contact us voluntarily)</li>
+          <li>Precise location, contacts, photos, or browsing history outside the App</li>
+          <li>Apple ID or advertising identifiers (IDFA) for advertising</li>
+          <li>Data through third-party analytics or crash-reporting SDKs (none are integrated in the current iOS App)</li>
+        </ul>
       </section>
 
-      <section class="cartoon-card">
-        <h2>4. Data Retention and Security</h2>
-        <p>We retain information only as long as needed for the purposes described in this policy and apply reasonable safeguards to protect it. No method of transmission or storage is 100% secure.</p>
+      <section class="cartoon-card policy-section">
+        <h2>5. HOW WE USE INFORMATION</h2>
+        <p>We use information to:</p>
+        <ol>
+          <li>Provide the service (transcribe public video links, translate content, generate AI summaries, and deliver results in the App)</li>
+          <li>Run async jobs (queue, process, poll, and complete long-running transcription and translation tasks)</li>
+          <li>Send notifications when a job finishes (if you opted in to push notifications)</li>
+          <li>Enforce fair-use and abuse-prevention limits per device (for example, daily job counts and processing minutes)</li>
+          <li>Improve reliability, debug errors, prevent fraud, and maintain security</li>
+          <li>Comply with applicable law</li>
+        </ol>        <p>We do not sell your personal information.</p>
       </section>
 
-      <section class="cartoon-card">
-        <h2>5. Your Choices</h2>
-        <p>You may contact us to ask questions about your information or request updates where applicable. We will respond in line with applicable privacy laws.</p>
+      <section class="cartoon-card policy-section">
+        <h2>6. LEGAL BASES FOR PROCESSING (EEA / UK USERS)</h2>
+        <p>Where GDPR or UK GDPR applies, we rely on:</p>
+        <ul>
+          <li><strong>Providing transcription, translation, and summaries:</strong> Contract (necessary to deliver the service you request)</li>
+          <li><strong>AI processing via OpenAI:</strong> Consent (you agree in the in-app AI consent screen before data is sent)</li>
+          <li><strong>Push notifications:</strong> Consent (iOS system permission)</li>
+          <li><strong>Device identifier and usage limits:</strong> Legitimate interests (operate, secure, and fairly allocate the service)</li>
+          <li><strong>Subscription via Apple:</strong> Contract</li>
+        </ul>        <p>You may withdraw AI consent at any time in the App (Settings → Privacy → Revoke AI consent). Withdrawal stops new AI processing requests but does not affect processing already performed.</p>
       </section>
 
-      <section class="cartoon-card">
-        <h2>6. Contact Us</h2>
-        <p>For privacy-related questions, email us at <a href="mailto:hi@damastechnologies.com">hi@damastechnologies.com</a>.</p>
+      <section class="cartoon-card policy-section">
+        <h2>7. AI PROCESSING AND YOUR CONSENT</h2>
+        <p>Before your data is sent for AI-powered transcription, translation, or summarization, the App shows an AI processing consent screen that explains:</p>
+        <ul>
+          <li><strong>What is sent:</strong> video links, transcript text, and selected language (as applicable)</li>
+          <li><strong>Who processes it:</strong> our servers, which may use OpenAI's API</li>
+          <li><strong>What we do not do:</strong> we do not host or redistribute third-party videos; we display transcripts and AI-generated notes</li>
+        </ul>        <p>You may decline consent and still browse the App without starting new AI jobs. You may revoke consent later in Privacy settings. Revoking consent stops new server AI processing; content already saved on your device remains until you delete it.</p>
+        <p>OpenAI's practices are governed by its own policies: <a href="https://openai.com/policies/privacy-policy">https://openai.com/policies/privacy-policy</a></p>
+      </section>
+
+      <section class="cartoon-card policy-section">
+        <h2>8. HOW WE SHARE INFORMATION</h2>        <h3>8.1 Service providers (processors)</h3>
+        <p><strong>Cloud hosting (for example, Google Cloud Run)</strong><br>Purpose: API, job orchestration, storage<br>Data shared: Links, audio, text, device ID, tokens, logs</p>
+        <p><strong>OpenAI</strong><br>Purpose: Transcription and AI note generation<br>Data shared: Content you submit for processing (after consent)</p>
+        <p><strong>Apple</strong><br>Purpose: App distribution, payments, push infrastructure<br>Data shared: Subscription transactions; push delivery metadata</p>
+        <p>We require processors to handle data only on our instructions and subject to appropriate safeguards.</p>
+        <h3>8.2 Legal and safety</h3>
+        <p>We may disclose information if we believe it is necessary to comply with law, regulation, legal process, or governmental request; protect the rights, property, or safety of Damas, our users, or others; or detect and prevent fraud, abuse, or security issues.</p>
+        <h3>8.3 Business transfers</h3>
+        <p>If we are involved in a merger, acquisition, or asset sale, your information may transfer as part of that transaction. We will notify you of any material change in ownership or use.</p>
+        <h3>8.4 We do not sell personal information</h3>
+        <p>We do not sell or share personal information for cross-context behavioral advertising.</p>
+      </section>
+
+      <section class="cartoon-card policy-section">
+        <h2>9. INTERNATIONAL DATA TRANSFERS</h2>
+        <p>Our servers and subprocessors may process data in the United States and other countries where they or we operate. These countries may have different data protection laws than your country.</p>
+        <p>Where required, we implement appropriate safeguards (such as standard contractual clauses) for transfers from the EEA/UK.</p>
+      </section>
+
+      <section class="cartoon-card policy-section">
+        <h2>10. DATA STORAGE AND RETENTION</h2>        <h3>10.1 On your device</h3>
+        <p>The App stores recordings, transcripts, summaries, and notes locally using SwiftData and the App's document storage. You can delete individual recordings from the App; deletion removes associated local files and note data.</p>
+        <p>Preferences (for example, AI consent, onboarding completion, subscription cache) may be stored in UserDefaults. Your device_id is stored in the iOS Keychain.</p>
+        <h3>10.2 On our servers</h3>
+        <p>When you submit a job, we and our providers may temporarily or persistently store job identifiers and status, source URLs and derived text (transcripts, translations, summaries), device identifier and optional push token, and usage metadata (for example, processing duration for fair-use limits).</p>
+        <p>Server-side data is kept only as long as reasonably necessary to provide the service, enforce limits, resolve disputes, meet legal obligations, and maintain security. Unless a longer period is required by law, we aim to delete or anonymize operational logs within 90 days and job-related content within 30–90 days after completion, subject to backup cycles.</p>
+        <p>We do not offer a self-service "delete all server data" button in the current App. To request deletion of server-side data associated with your device identifier, contact <a href="mailto:hi@damastechnologies.com">hi@damastechnologies.com</a>.</p>
+        <h3>10.3 Apple</h3>
+        <p>Subscription and payment records are retained by Apple under Apple's policies.</p>
+      </section>
+
+      <section class="cartoon-card policy-section">
+        <h2>11. THIRD-PARTY CONTENT AND PLATFORMS</h2>        <h3>11.1 Social video links</h3>
+        <p>The App is designed to process public video post links that you choose to submit. Damas Technologies LLC is not affiliated with, endorsed by, or sponsored by X Corp. or any social platform. Platform names are used only to describe compatibility.</p>
+        <p>You are responsible for ensuring you have the right to use and process content you submit. Private, restricted, or non-public links may fail or be unsupported.</p>
+        <h3>11.2 No redistribution of third-party video</h3>
+        <p>Damas does not host or redistribute third-party videos in the App. We process audio and text derived from links you provide and show transcripts and AI-generated notes to you.</p>
+      </section>
+
+      <section class="cartoon-card policy-section">
+        <h2>12. SUBSCRIPTIONS AND PAYMENTS</h2>
+        <p>Damas offers optional premium subscriptions through Apple's In-App Purchase system (StoreKit).</p>
+        <ul>
+          <li>Payment processing is performed entirely by Apple.</li>
+          <li>We receive subscription entitlement status, not your full payment card details.</li>
+          <li>Manage, cancel, or request refunds through your Apple ID → Subscriptions settings or Apple Support.</li>
+          <li>Free trials and pricing are shown in the App and App Store at purchase time.</li>
+        </ul>
+      </section>
+
+      <section class="cartoon-card policy-section">
+        <h2>13. PUSH NOTIFICATIONS</h2>
+        <p>If you enable notifications, we may send alerts when a transcription or translation job completes. You can disable notifications anytime in iOS Settings → Damas → Notifications.</p>
+      </section>
+
+      <section class="cartoon-card policy-section">
+        <h2>14. PERMISSIONS</h2>
+        <p><strong>Microphone:</strong> Only if you use in-app voice recording; to capture audio notes for transcription.</p>
+        <p><strong>Notifications:</strong> To notify you when long-running jobs complete.</p>
+        <p>The App does not request access to your photo library, contacts, or location for core features.</p>
+      </section>
+
+      <section class="cartoon-card policy-section">
+        <h2>15. SECURITY</h2>
+        <p>We use reasonable technical and organizational measures to protect information, including HTTPS for data in transit, Keychain storage for device identifiers, access controls on production infrastructure, and transaction verification for App Store purchases.</p>
+        <p>No method of transmission or storage is 100% secure. We cannot guarantee absolute security.</p>
+      </section>
+
+      <section class="cartoon-card policy-section">
+        <h2>16. YOUR RIGHTS AND CHOICES</h2>
+        <p>Depending on your location, you may have rights to access, correct, delete, restrict, or object to certain processing; withdraw consent; request data portability; and lodge a complaint with a supervisory authority (EEA/UK).</p>        <h3>In the App today, you can:</h3>
+        <ul>
+          <li>Revoke AI consent (Privacy settings)</li>
+          <li>Delete local recordings and notes</li>
+          <li>Disable push notifications (iOS Settings)</li>
+          <li>Cancel subscriptions (Apple)</li>
+        </ul>
+        <p>For other requests, email <a href="mailto:hi@damastechnologies.com">hi@damastechnologies.com</a>. We may need to verify your request and your device identifier.</p>
+        <p><strong>California residents (CCPA/CPRA):</strong> We do not sell personal information. California residents may request access, deletion, and correction as described above. We will not discriminate against you for exercising privacy rights.</p>
+      </section>
+
+      <section class="cartoon-card policy-section">
+        <h2>17. CHILDREN'S PRIVACY</h2>
+        <p>Damas is not directed to children under 13 (or the minimum age in your jurisdiction). We do not knowingly collect personal information from children. If you believe a child has provided us information, contact <a href="mailto:hi@damastechnologies.com">hi@damastechnologies.com</a> and we will take steps to delete it.</p>
+      </section>
+
+      <section class="cartoon-card policy-section">
+        <h2>18. CHANGES TO THIS POLICY</h2>
+        <p>We may update this Privacy Policy from time to time. We will post the revised policy at <a href="https://www.damascenerose.com/privacy-policy.html">https://www.damascenerose.com/privacy-policy.html</a> and update the "Last updated" date. If changes are material, we may provide additional notice in the App or require renewed consent where required by law.</p>
+      </section>
+
+      <section class="cartoon-card policy-section">
+        <h2>19. CONTACT US</h2>
+        <p>Damas Technologies LLC</p>
+        <p>Email: <a href="mailto:hi@damastechnologies.com">hi@damastechnologies.com</a></p>
+        <p>Website: <a href="https://www.damascenerose.com">https://www.damascenerose.com</a></p>
+        <p>Questions about this Privacy Policy or our data practices may be sent to the email above.</p>
+      </section>
+
+      <section class="cartoon-card policy-section">
+        <h2>APPENDIX A — DATA INVENTORY</h2>
+        <p><strong>Note:</strong> Subscription verification is performed on-device via StoreKit. If server-side receipt verification is added in the future, this policy will be updated accordingly.</p>
+        <p><strong>END OF PRIVACY POLICY</strong></p>
+        <div class="policy-table-wrap">
+          <table class="policy-table">
+            <thead>
+              <tr>
+            <th>Data type</th>
+            <th>Source</th>
+            <th>Stored locally</th>
+            <th>Sent to our servers</th>
+            <th>Sent to OpenAI</th>
+            <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+          <tr>
+            <td>Video post URL</td>
+            <td>You paste</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Possibly</td>
+            <td>Transcribe / translate</td>
+          </tr>
+          <tr>
+            <td>Target language</td>
+            <td>You select</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Possibly</td>
+            <td>Translation</td>
+          </tr>
+          <tr>
+            <td>Transcript text</td>
+            <td>Generated / edited</td>
+            <td>Yes</td>
+            <td>Yes (summarize)</td>
+            <td>Yes (summarize)</td>
+            <td>AI summaries</td>
+          </tr>
+          <tr>
+            <td>Audio file</td>
+            <td>Microphone (if enabled)</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Possibly</td>
+            <td>Transcription</td>
+          </tr>
+          <tr>
+            <td>AI summary / notes</td>
+            <td>Generated</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Display / edit</td>
+          </tr>
+          <tr>
+            <td>Device ID (UUID)</td>
+            <td>Auto-generated</td>
+            <td>Keychain</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Jobs, limits, support</td>
+          </tr>
+          <tr>
+            <td>Push token</td>
+            <td>iOS (if allowed)</td>
+            <td>Memory only</td>
+            <td>Yes (optional)</td>
+            <td>No</td>
+            <td>Job completion alerts</td>
+          </tr>
+          <tr>
+            <td>Subscription status</td>
+            <td>Apple StoreKit</td>
+            <td>Cached</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Access control</td>
+          </tr>
+          <tr>
+            <td>Onboarding profile</td>
+            <td>You select</td>
+            <td>UserDefaults</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Personalization (local only)</td>
+          </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <nav class="cartoon-nav" aria-label="Legal pages">
