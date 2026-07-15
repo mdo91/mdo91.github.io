@@ -22,8 +22,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-      - run: npm install --include=optional
+      - name: Install dependencies
+        run: |
+          rm -rf node_modules
+          npm install
+          npm install --no-save @rollup/rollup-linux-x64-gnu@4.62.2
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
