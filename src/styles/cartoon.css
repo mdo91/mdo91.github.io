@@ -69,6 +69,30 @@ body::after {
   padding: 2rem 1.25rem 3rem;
 }
 
+.page.long-form {
+  max-width: 960px;
+}
+
+.policy-meta {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 3px solid var(--ink);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 3px 3px 0 var(--ink);
+  text-align: center;
+}
+
+.policy-meta p {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.policy-meta p:last-child {
+  margin-bottom: 0;
+}
+
 .cartoon-header {
   text-align: center;
   margin-bottom: 2rem;
@@ -118,11 +142,66 @@ body::after {
   font-weight: 700;
 }
 
+.policy-section h2 {
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+.cartoon-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
 .cartoon-card p,
 .cartoon-card li {
   margin: 0 0 0.75rem;
   line-height: 1.65;
   font-weight: 400;
+}
+
+.policy-section p,
+.policy-section li {
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.cartoon-card ul,
+.cartoon-card ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.policy-table-wrap {
+  overflow-x: auto;
+  margin-top: 0.75rem;
+  border: 3px solid var(--ink);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.policy-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.policy-table th,
+.policy-table td {
+  border: 1px solid var(--ink);
+  padding: 0.55rem 0.65rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.policy-table th {
+  background: var(--lavender);
+  font-weight: 700;
+}
+
+.policy-table tr:nth-child(even) td {
+  background: rgba(255, 248, 231, 0.65);
 }
 
 .cartoon-card ul {
