@@ -2,6 +2,9 @@ import type { LegalPageContent } from './types';
 import { siteConfig } from '../config/site';
 
 const email = siteConfig.contactEmail;
+const website = siteConfig.websiteUrl;
+const domain = siteConfig.websiteDomain;
+const privacyUrl = siteConfig.privacyPolicyUrl;
 
 export const privacyPolicyPage: LegalPageContent = {
   filename: 'privacy-policy.html',
@@ -19,7 +22,7 @@ export const privacyPolicyPage: LegalPageContent = {
     {
       title: '1. INTRODUCTION',
       paragraphs: [
-        `This Privacy Policy explains how Damas Technologies LLC ("Damas," "we," "us," or "our") collects, uses, stores, and shares information when you use the Damas mobile application for iPhone (the "App") and related services available at <a href="https://www.damascenerose.com">damascenerose.com</a>.`,
+        `This Privacy Policy explains how Damas Technologies LLC ("Damas," "we," "us," or "our") collects, uses, stores, and shares information when you use the Damas mobile application for iPhone (the "App") and related services available at <a href="${website}">${domain}</a>.`,
         'Damas helps you turn public social video links and, where available, audio you provide into transcripts, translations, and AI-generated notes and summaries.',
         'By using the App, you agree to this Privacy Policy. If you do not agree, please do not use the App.',
         `<strong>Data controller:</strong><br>Damas Technologies LLC<br>Contact: <a href="mailto:${email}">${email}</a>`,
@@ -31,7 +34,7 @@ export const privacyPolicyPage: LegalPageContent = {
       list: [
         'The Damas iOS App (bundle ID: com.damas.ai.recording.technologies)',
         'Our API and processing services that power transcription, translation, and summarization',
-        'Our website at damascenerose.com (including this policy)',
+        `Our website at ${domain} (including this policy)`,
       ],
       subsections: [
         {
@@ -299,7 +302,7 @@ export const privacyPolicyPage: LegalPageContent = {
     {
       title: '18. CHANGES TO THIS POLICY',
       paragraphs: [
-        'We may update this Privacy Policy from time to time. We will post the revised policy at <a href="https://www.damascenerose.com/privacy-policy.html">https://www.damascenerose.com/privacy-policy.html</a> and update the "Last updated" date. If changes are material, we may provide additional notice in the App or require renewed consent where required by law.',
+        `We may update this Privacy Policy from time to time. We will post the revised policy at <a href="${privacyUrl}">${privacyUrl}</a> and update the "Last updated" date. If changes are material, we may provide additional notice in the App or require renewed consent where required by law.`,
       ],
     },
     {
@@ -307,7 +310,7 @@ export const privacyPolicyPage: LegalPageContent = {
       paragraphs: [
         'Damas Technologies LLC',
         `Email: <a href="mailto:${email}">${email}</a>`,
-        'Website: <a href="https://www.damascenerose.com">https://www.damascenerose.com</a>',
+        `Website: <a href="${website}">${website}</a>`,
         'Questions about this Privacy Policy or our data practices may be sent to the email above.',
       ],
     },
