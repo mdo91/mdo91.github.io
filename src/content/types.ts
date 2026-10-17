@@ -32,5 +32,6 @@ export type LegalPageContent = {
     lastUpdated: string;
     effectiveDate: string;
   };
+  navigation?: readonly { href: string; label: string }[];
   sections: readonly PageSection[];
 };

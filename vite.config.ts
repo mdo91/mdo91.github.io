@@ -9,6 +9,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         termsOfUse: resolve(__dirname, 'terms-of-use.html'),
         privacyPolicy: resolve(__dirname, 'privacy-policy.html'),
+        squatvisionPrivacy: resolve(__dirname, 'squatvision-privacy-policy.html'),
         support: resolve(__dirname, 'support.html'),
       },
     },
