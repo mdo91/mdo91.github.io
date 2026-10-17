@@ -71,8 +71,8 @@ ${renderParagraphs(section.paragraphs ?? [])}
       </section>`;
 }
 
-function renderNav(activePath: string): string {
-  const links = legalPages
+function renderNav(activePath: string, navigation: LegalPageContent['navigation'] = legalPages): string {
+  const links = navigation
     .map((page) => {
       const activeClass = page.href === activePath ? ' class="is-active"' : '';
       return `        <a href="${page.href}"${activeClass}>${page.label}</a>`;
@@ -116,7 +116,7 @@ export function renderLegalPage(page: LegalPageContent): string {
 ${meta}
 ${sections}
 
-${renderNav(page.path)}
+${renderNav(page.path, page.navigation)}
       <a class="home-link" href="/">← Back to Home</a>
 ${renderFooter()}
     </main>
