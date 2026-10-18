@@ -8,7 +8,7 @@ export const squatvisionPrivacyPage: LegalPageContent = {
   heading: 'Squat League Privacy Policy',
   subtitle: 'On-device squat coaching, optional Game Center competition, and Apple subscriptions.',
   layout: 'long-form',
-  meta: { lastUpdated: 'October 17, 2026', effectiveDate: 'October 17, 2026' },
+  meta: { lastUpdated: 'October 18, 2026', effectiveDate: 'October 17, 2026' },
   navigation: [
     { href: '/squatvision-privacy-policy.html', label: 'Squat League Privacy Policy' },
     { href: 'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/', label: 'Terms of Use (Apple EULA)' },
@@ -30,12 +30,16 @@ export const squatvisionPrivacyPage: LegalPageContent = {
     { title: 'Optional Game Center rankings and achievements', paragraphs: [
       'Solo training and history do not require an app account. Apple operates Game Center authentication, player profiles, friend controls, leaderboards, achievements, and matchmaking.',
       'If you explicitly join ranked challenges, integer challenge rep totals are sent to Game Center and associated with your Game Center profile. Published rankings show your display name, profile picture, rank, and score. Friends is an audience filter; a published score may also appear in Everyone rankings. Ordinary solo workouts do not submit leaderboard scores.',
-      'Achievement synchronization is a separate optional setting for each Game Center account. Enabling it sends achievement identifiers and percentage progress to Apple, including eligible progress from solo training. Existing unowned history is credited once to the first account enabling this option.',
+      'Achievement synchronization is on by default when you connect Game Center and can be turned off for each account. Saved choices to turn it off are retained. Synchronization sends achievement identifiers and percentage progress to Apple, including eligible progress from solo training. Existing unowned history is credited once to the first account that synchronizes.',
       'Apple’s service is governed by <a href="https://www.apple.com/legal/privacy/data/en/game-center/">Apple’s Game Center privacy information</a>.',
     ] },
     { title: 'Live online squat duels', paragraphs: [
       'When you start or accept a duel, Game Center connects you with another player. The app exchanges player profiles, match rules, readiness, clock synchronization information, rep events, accepted scores, and match results with that opponent. Camera frames, body landmarks, depth measurements, and form feedback remain on your device. Squat League does not provide camera streaming or audio/video chat.',
       'Genuine online reps can be saved to local workout history and contribute to eligible squat and streak achievements. They are not added to daily or weekly leaderboard totals.',
+    ] },
+    { title: 'Sharing achievement badges', paragraphs: [
+      'You can choose Share badge from an earned achievement’s detail screen. The app creates a badge image on your device containing its artwork, localized achievement title and description, and Squat League branding. The shared image does not include your Game Center account name, camera footage, or workout history. Locked and demo badges cannot be shared as earned achievements.',
+      'The iOS share sheet lets you choose a compatible app or another destination. Nothing is posted automatically. A receiving social app or service processes the content you choose to share under its own privacy policy.',
     ] },
     { title: 'Subscriptions and purchases', paragraphs: [
       'Apple processes weekly and monthly Squat League Pro subscriptions through the App Store. The app uses StoreKit on your device to verify subscription access, eligibility for introductory offers, renewals, expiration, refunds, and restoration. The app does not receive payment card details and does not send transaction payloads to a custom subscription server.',
