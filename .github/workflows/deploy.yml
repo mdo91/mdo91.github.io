@@ -28,6 +28,16 @@ jobs:
           npm install
           npm install --no-save @rollup/rollup-linux-x64-gnu@4.62.2
       - run: npm run build
+      - name: Prevent the retired Damas domain from being republished
+        run: |
+          node --input-type=module <<'NODE'
+          import { existsSync, readFileSync } from 'node:fs';
+          for (const path of ['public/CNAME', 'docs/CNAME', 'dist/CNAME']) {
+            if (existsSync(path) && /^(?:www\.)?damascenerose\.com\.?$/im.test(readFileSync(path, 'utf8').trim())) {
+              throw new Error(`${path} claims the Damas domain, which belongs to mdo91/damascene-rose-web after transfer.`);
+            }
+          }
+          NODE
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
